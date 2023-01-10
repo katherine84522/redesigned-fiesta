@@ -1,5 +1,5 @@
 class VendorSweetSerializer < ActiveModel::Serializer
-  attributes :id, :price
+  attributes :id, :price, :name
 
 
 
