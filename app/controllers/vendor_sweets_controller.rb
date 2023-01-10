@@ -5,7 +5,7 @@ class VendorSweetsController < ApplicationController
         if vendor_sweet.save
             render json: vendor_sweet
         else
-            render json: { "errors": ["validation errors"]}
+            render json: { "errors": ["validation errors"]}, status: 422
         end
     end
 
@@ -15,7 +15,7 @@ class VendorSweetsController < ApplicationController
             vendor_sweet.destroy
             render json: {}
         else 
-            render json: { "error": "VendorSweet not found" }
+            render json: { "error": "VendorSweet not found" }, status: 404
         end
     end
 end
